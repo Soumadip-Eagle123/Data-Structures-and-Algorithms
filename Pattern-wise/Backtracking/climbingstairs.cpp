@@ -3,6 +3,7 @@ public:
     int rec(int level, int n, int ans){
         if(level==n) return 1;
         if(level>n) return 0;
+
         for(int i=1; i<=2; i++){
             if(level+i<=n) {
                 int ways = rec(level+i, n, 0);
