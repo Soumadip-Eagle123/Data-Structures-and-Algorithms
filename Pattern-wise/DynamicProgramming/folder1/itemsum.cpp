@@ -46,7 +46,29 @@ void printset(int level, int sum_left){
         printset(level+1, sum_left-x[level])
     }
 }
+/*
+To print all solutions ->
 
+void printset(int level, int sum_left, vector<int> &cur){
+    if(level==n+1){
+        if(sum_left==0){
+            for(auto it:cur){
+                cout << it << " ";
+            }
+            cout << endl;
+        }
+        return;
+    }
+    //find the correct transition
+     if(rec(level+1, sum_left)==1){
+        printset(level+1, sum_left, cur);
+    }
+    if(rec(level+1, sum_left-x[level])){
+        cout << x[level] << " ";
+        printset(level+1, sum_left-x[level], cur);
+    }
+}
+*/
 void solve(){
     cin >> n;
     int q;
@@ -58,7 +80,8 @@ void solve(){
     while(q--){
         cin >> t;
         if(rec(1, t){
-            printset(1, t);
+            // vector<int> cur; -> for printing all solutions
+            printset(1, t); // printset(1, t, cur); 
             cout << endl;
         })
         else{
