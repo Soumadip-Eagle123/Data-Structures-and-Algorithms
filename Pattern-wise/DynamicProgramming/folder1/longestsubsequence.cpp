@@ -4,6 +4,7 @@ using namespace std;
 int n;
 int arr[10010];
 int dp[10010];
+
 int rec(int level){
     if(level<0) return 0;
     if(dp[level]!=-1) return dp[level];
